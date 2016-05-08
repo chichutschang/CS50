@@ -1,0 +1,11 @@
+﻿0.  Pneumonoultramicroscopicsilicovolcanoconiosis is the longest word in the English dictionary. According to Merriam-Webster's Medical Dictionary, pneumonoultramicroscopicsilicovolcanoconiosis is a pneumoconiosis caused by inhalation of very fine silicate or quartz dust.
+1.  According to its man page, "getrusage" returns resource usage statistics for who
+2.  There are 16 members in a "struct rusage".
+3.  We pass by reference instead of by value so that the function parameter must be a pointer. The function can then de-reference the pointer to access or change the value being pointed to.
+4.  The speller.c program uses the variable fp to open the text file, which holds the list of words. The program checks to make sure that the first character in the text file is a letter or “\” sign. The program keeps checking the next letter until the array of characters in the word hits zero. If the word is longer than the longest word in the English language dictionary, the program will halt. If the word has a number in it, the program will halt. At the end of each word, the program inserts “\0” to denote that the word has ended. The program checks to see if the word is spelled correctly as well as the resource usage statistics. After the word is checked, the program moves onto the next word. 
+5.  We use fgetc instead of fscanf because fgetc reads only one character, whereas fscanf will read everything in the string.
+6.  The const parameter does not allow the program to change the content of the variables.
+7. I used a trie to implement the spell-checker. The nth child node of the trie corresponds to the nth letter of the word until the child node ends. 
+8. 0.25 seconds for the Austin Powers script. O
+9. Not too much. I cleaned up some extraneous code and re-ran the program. The first time I re-ran the program, it took .41 seconds to go through the Austin Powers script. However, after re-running it a third time, it takes .12-.13 seconds to go through the Austin Powers script. 
+10. I think that I was able to chip away at most of the bottlenecks. The biggest bottleneck is probably the time to load the dictionary. I suppose I could try programming pset5 with a hashtable and compare the two methods (trie vs hashtable) to see which is faster to load and chip away at the bottleneck that way.

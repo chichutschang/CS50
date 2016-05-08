@@ -1,0 +1,19 @@
+0.  How many different colors does each format support? BMP: 1.8446744E19; GIF: 256; JPEG: 16,777,216; PNG: 16,777,216 million
+1.  Which of the formats supports animation? GIF & PNG
+2.  What's the difference between lossy and lossless compression? With lossless compression, the data originally in the file remains after the file is uncompressed. With lossy compression, only part of the original data remains after the file is uncompressed because lossy compression permanently eliminates certain data. 
+3.  Which of these formats is lossy-compressed? JPEG
+4.  What happens, technically speaking, when a file is deleted on a FAT system? The system modifies the filename's first character in the file's directory entry to signal that the file has been deleted. The system moves all the file's FAT clusters to the hard drive's list of free clusters.
+5.  What can someone like you do to ensure (with high probability) that files you delete cannot be recovered? Physically destroy the hard drive
+6.  What's stdint.h? The <stdint.h> header declares sets of integer types with specified widths
+7.  What's the point of using uint8_t, uint32_t, int32_t, and uint16_t in a program? They define the exact-width integer type. 
+8.  How many bytes is a BYT, a DWORD, a LONG, and a WORD, respectively? (Assume a 32-bit architecture like the CS50 Applicance) 1 BYTE = 1 byte; 1 DWORD = 4 bytes; 1 LONG = 4 bytes 1 WORD = 2 bytes
+9.  What (in ASCII, decimal or hexadeimal) must the first two bytes of any BMP file be? (Leading bytes used to identify file formats (with high probability) are generally called "magic numbers.)" The first two bytes of BMP file format are the characters "B" followed by the character "M" in ACII encoding.
+10. What's the difference between bfSize and biSize? The bfSize stores the size of the image and both headers while biSize is the size of the image without headers.
+11. What does it mean if biHeight is negative? The image is top-down.
+12. What field in BITMAPINFOHEADER specifies the BMP's color depth (i.e. bits per pixel)? biBitCount specifies the number of colors in a bitmap
+13. Why might fopen return NULL in copy.c:37? The program is unable to find the outfile in argv[2].
+14. Why is the third argument to fread always 1 in our code? The number of elements to be allocated is 1 becase we will always be reading one struct.
+15. What value does copy.c:70 assign padding if bi.biWidth is 3? ((4 - ( 3 * 3)) % 4) % 4 = 1
+16. What does fseek do? fseek moves the file pointer of a stream to a given offset.
+17. What is SEEK_CUR? SEEK_CUR moves the pointer x bytes down from the current pointer position.
+18. Whodunit? Rob Bowden
